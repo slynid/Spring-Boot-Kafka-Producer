@@ -30,7 +30,7 @@ public class APIController {
 		logMsg.append("API :: /kafka/producer/api/produce/"+topic+"/ Request Data: "+message.toString());
 		log.debug(logMsg.toString());
 		logMsg=null;
-		kafkaTemplate.send(topic,message.getMagKey(),message);
+		kafkaTemplate.send(topic,message.getMsgKey(),message);
 		return ResponseEntity.status(HttpStatus.OK).body("success");
 		}catch(InvalidTopicException te) {
 			log.error("InvalidTopicException :: "+te.getMessage());

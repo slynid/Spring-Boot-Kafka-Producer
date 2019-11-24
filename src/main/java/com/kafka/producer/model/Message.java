@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Message {
-	private String magKey;
+	private String msgKey;
 	private String msgVal;
 
 }
